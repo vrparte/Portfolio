@@ -12,8 +12,7 @@ import {
     FaTwitter,
     FaLinkedin,
     FaGithub,
-    FaYoutube,
-    FaBlogger,
+    FaInstagram,
 } from 'react-icons/fa';
 
 function Landing() {
@@ -114,32 +113,19 @@ function Landing() {
                                 />
                             </a>
                         )}
-                        {socialsData.youtube && (
+                        {socialsData.instagram && (
                             <a
-                                href={socialsData.youtube}
+                                href={socialsData.instagram}
                                 target='_blank'
                                 rel='noreferrer'
                             >
-                                <FaYoutube
+                                <FaInstagram
                                     className='landing--social'
                                     style={{ color: theme.secondary }}
-                                    aria-label='YouTube'
+                                    aria-label='Instagram'
                                 />
                             </a>
-                        )}
-                        {socialsData.blogger && (
-                            <a
-                                href={socialsData.blogger}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaBlogger
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='Blogger'
-                                />
-                            </a>
-                        )}
+                        )}                      
                     </div>
                 </div>
                 <img

@@ -1,6 +1,6 @@
 export const aboutData = {
     title: "Who I am",
-    description1: "My name's Jane. I'm a web designer and developer based in Southampton, UK.",
-    description2: "During the day I work as a lead developer at a local agency and in the evening I  work on freelance projects and utilize the time to built my own products. I spent my leisure hours writing articles and poetry. Right now I'm also trying a hand at machine learning and AI. I love to learn and explore new arenas.",
-    image: 2
+    description1: "I'm currently pursuing my junior year Bachelors degree in Computer and Information Sciences. I'm an aspiring full stack developer and an AI tech enthusiast. I have built a strong foundation in software development.", 
+    description2: "My experience in these areas allow me to approach projects with confidence and deliver high-quality results. I have a strong belief in the value of continuous learning and staying adaptable in the ever-evolving world of software development.",
+    image: 1
 }
