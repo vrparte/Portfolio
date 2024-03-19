@@ -1,23 +1,23 @@
 export const educationData = [
     {
         id: 1,
-        institution: 'Marble Hills Middle School',
-        course: 'Higher Secondary Education',
-        startYear: '2007',
-        endYear: '2015'
-    },
-    {
-        id: 2,
-        institution: 'Somerset School of Science',
-        course: 'Bachelor of Technology',
-        startYear: '2015',
+        institution: 'Lilavatibai Podar High School',
+        course: 'Secondary Education',
+        startYear: '2009',
         endYear: '2019'
     },
     {
-        id: 3,
-        institution: 'Hawking University, Cambridge',
-        course: 'Master of Technology',
+        id: 2,
+        institution: 'Christ Junior College',
+        course: 'International Baccalaureate Diploma Programme',
         startYear: '2019',
+        endYear: '2021'
+    },
+    {
+        id: 3,
+        institution: 'University of Cincinnati',
+        course: 'Bahcelors in Computer and Information Sciences',
+        startYear: '2021',
         endYear: 'Present'
     },
 ]

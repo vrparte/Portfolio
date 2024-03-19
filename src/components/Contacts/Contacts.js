@@ -8,14 +8,14 @@ import {
     FaTwitter,
     FaLinkedinIn,
     FaGithub,
-    FaYoutube,
-    FaBloggerB,
-    FaRedditAlien,
-    FaStackOverflow,
-    FaCodepen,
+    //FaYoutube,
+    //FaBloggerB,
+    //FaRedditAlien,
+    //FaStackOverflow,
+    //FaCodepen,
     FaInstagram,
-    FaGitlab,
-    FaMediumM,
+    //FaGitlab,
+    //FaMediumM,
 } from 'react-icons/fa';
 import { AiOutlineSend, AiOutlineCheckCircle } from 'react-icons/ai';
 import { FiPhone, FiAtSign } from 'react-icons/fi';
@@ -353,7 +353,7 @@ function Contacts() {
                                     <FaInstagram aria-label='Instagram' />
                                 </a>
                             )}
-                            {socialsData.medium && (
+                            {/*socialsData.medium && (
                                 <a
                                     href={socialsData.medium}
                                     target='_blank'
@@ -362,8 +362,8 @@ function Contacts() {
                                 >
                                     <FaMediumM aria-label='Medium' />
                                 </a>
-                            )}
-                            {socialsData.blogger && (
+                            )*/}
+                            {/*socialsData.blogger && (
                                 <a
                                     href={socialsData.blogger}
                                     target='_blank'
@@ -372,8 +372,8 @@ function Contacts() {
                                 >
                                     <FaBloggerB aria-label='Blogger' />
                                 </a>
-                            )}
-                            {socialsData.youtube && (
+                            )*/}
+                            {/*socialsData.youtube && (
                                 <a
                                     href={socialsData.youtube}
                                     target='_blank'
@@ -382,8 +382,8 @@ function Contacts() {
                                 >
                                     <FaYoutube aria-label='YouTube' />
                                 </a>
-                            )}
-                            {socialsData.reddit && (
+                            )*/}
+                            {/*socialsData.reddit && (
                                 <a
                                     href={socialsData.reddit}
                                     target='_blank'
@@ -392,8 +392,8 @@ function Contacts() {
                                 >
                                     <FaRedditAlien aria-label='Reddit' />
                                 </a>
-                            )}
-                            {socialsData.stackOverflow && (
+                            )*/}
+                            {/*socialsData.stackOverflow && (
                                 <a
                                     href={socialsData.stackOverflow}
                                     target='_blank'
@@ -402,8 +402,8 @@ function Contacts() {
                                 >
                                     <FaStackOverflow aria-label='Stack Overflow' />
                                 </a>
-                            )}
-                            {socialsData.codepen && (
+                            )*/}
+                            {/*socialsData.codepen && (
                                 <a
                                     href={socialsData.codepen}
                                     target='_blank'
@@ -412,8 +412,8 @@ function Contacts() {
                                 >
                                     <FaCodepen aria-label='CodePen' />
                                 </a>
-                            )}
-                            {socialsData.gitlab && (
+                            )*/}
+                            {/*socialsData.gitlab && (
                                 <a
                                     href={socialsData.gitlab}
                                     target='_blank'
@@ -422,7 +422,7 @@ function Contacts() {
                                 >
                                     <FaGitlab aria-label='GitLab' />
                                 </a>
-                            )}
+                            )*/}
                         </div>
                     </div>
                 </div>

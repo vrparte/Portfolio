@@ -16,17 +16,17 @@ function Projects() {
     
     const useStyles = makeStyles(() => ({
         viewAllBtn : {
-            color: theme.tertiary, 
-            backgroundColor: theme.primary,
+            color: theme.primary, 
+            backgroundColor: theme.secondary,
             transition: 'color 0.2s',
             "&:hover": {
                 color: theme.secondary, 
-                backgroundColor: theme.primary,
+                backgroundColor: theme.secondary50,
             }
         },
         viewArr : {
-            color: theme.tertiary, 
-            backgroundColor: theme.secondary70,
+            color: theme.secondary, 
+            backgroundColor: theme.tertiary,
             width: '40px',
             height: '40px',
             padding: '0.5rem',
@@ -46,9 +46,9 @@ function Projects() {
     return (
         <>
             {projectsData.length > 0 && (
-                <div className="projects" id="projects" style={{backgroundColor: theme.secondary}}>
+                <div className="projects" id="projects" style={{backgroundColor: theme.primary}}>
                     <div className="projects--header">
-                        <h1 style={{color: theme.primary}}>Projects</h1>
+                        <h1 style={{color: theme.secondary}}>Projects</h1>
                     </div>
                     <div className="projects--body">
                         <div className="projects--bodyContainer">

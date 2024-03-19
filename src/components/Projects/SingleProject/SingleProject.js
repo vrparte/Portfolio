@@ -16,13 +16,13 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
             height: 40,
             borderRadius: 50,
             border: `2px solid ${theme.tertiary}`,
-            color: theme.tertiary,
+            color: theme.primary,
             transition: 'all 0.2s',
             '&:hover': {
                 backgroundColor: theme.secondary,
                 color: theme.primary,
                 transform: 'scale(1.1)',
-                border: `2px solid ${theme.secondary}`,
+                border: `2px solid ${theme.primary}`,
             },
         },
         icon: {
@@ -39,12 +39,12 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
             <div
                 key={id}
                 className='singleProject'
-                style={{ backgroundColor: theme.primary400 }}
+                style={{ backgroundColor: theme.secondary }}
             >
                 <div className='projectContent'>
                     <h2
                         id={name.replace(' ', '-').toLowerCase()}
-                        style={{ color: theme.tertiary }}
+                        style={{ color: theme.primary }}
                     >
                         {name}
                     </h2>
@@ -93,8 +93,8 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                 <p
                     className='project--desc'
                     style={{
-                        background: theme.secondary,
-                        color: theme.tertiary,
+                        background: theme.primary,
+                        color: theme.secondary,
                     }}
                 >
                     {desc}
@@ -102,8 +102,8 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                 <div
                     className='project--lang'
                     style={{
-                        background: theme.secondary,
-                        color: theme.tertiary80,
+                        background: theme.primary,
+                        color: theme.secondary,
                     }}
                 >
                     {tags.map((tag, id) => (
