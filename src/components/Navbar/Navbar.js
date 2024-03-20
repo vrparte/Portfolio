@@ -230,7 +230,7 @@ function Navbar() {
                         
 
                         
-                            <NavLink
+                            {/*<NavLink
                                 to='/#services'
                                 smooth={true}
                                 spy='true'
@@ -244,11 +244,11 @@ function Navbar() {
                                         Services
                                     </span>
                                 </div>
-                            </NavLink>
+                            </NavLink>*/}
                         
 
                         
-                            <NavLink
+                            {/*<NavLink
                                 to='/#blog'
                                 smooth={true}
                                 spy='true'
@@ -262,7 +262,7 @@ function Navbar() {
                                         Blog
                                     </span>
                                 </div>
-                            </NavLink>
+                            </NavLink>*/}
                         
 
                         
