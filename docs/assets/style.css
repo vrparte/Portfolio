@@ -137,3 +137,47 @@ h4 {font-size:1rem;line-height:1.5;margin:0 0 1rem;font-weight:700;letter-spacin
 }
 
 button:disabled {opacity:.55;cursor:not-allowed;color:var(--color-muted)}
+
+/* The portrait shares the name row on mobile and the introduction on desktop. */
+.hero {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 96px;
+  grid-template-areas:"meta meta" "name portrait" "intro intro" "about about" "links links";
+  align-items:center;
+  column-gap:var(--space-md);
+  row-gap:var(--space-lg);
+  max-width:none;
+}
+.hero-meta {grid-area:meta}
+.hero h1 {grid-area:name;margin:0;font-size:clamp(2rem,6vw,5.5rem)}
+.hero .intro {grid-area:intro;margin:0}
+.hero .about {grid-area:about}
+.hero .hero-links {grid-area:links;margin-top:0}
+.hero-portrait {grid-area:portrait;margin:0;min-width:0;padding:6px;background:var(--color-surface);border:1px solid var(--color-line);border-radius:12px}
+.hero-portrait img {display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center center;border-radius:6px}
+@media(min-width:48rem) {
+  .hero {
+    grid-template-columns:minmax(0,1fr) 220px;
+    grid-template-areas:"meta portrait" "name portrait" "intro portrait" "about portrait" "links portrait";
+    align-items:start;
+    column-gap:var(--space-xl);
+    row-gap:var(--space-lg);
+  }
+  .hero h1 {font-size:clamp(2.75rem,5.5vw,5rem)}
+  .hero .intro {font-size:clamp(1.125rem,1.8vw,1.5rem)}
+  .hero .about {font-size:.9375rem;line-height:1.75}
+  .hero-portrait {align-self:center;padding:8px;border-radius:16px}
+  .hero-portrait img {border-radius:8px}
+  .hero .hero-links {column-gap:1.5rem}
+}
+@media(min-width:64rem) {
+  .hero {grid-template-columns:minmax(0,1fr) 308px;column-gap:var(--space-3xl)}
+  .hero-portrait {padding:10px}
+}
+@media print {
+  .hero {display:block}
+  .hero-portrait {display:none}
+  .hero h1 {font-size:28pt;margin:.25rem 0 .5rem}
+  .hero .intro {font-size:11pt;margin-bottom:.5rem}
+  .hero .about {font-size:9pt}
+}
