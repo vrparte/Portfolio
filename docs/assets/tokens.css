@@ -11,6 +11,8 @@
   --color-line: oklch(88% 0.008 258);
   --color-accent: oklch(46% 0.19 263);
   --color-accent-soft: oklch(95% 0.025 263);
+  --color-topbar-accent: oklch(80% 0.1 263);
+  --color-topbar-border: oklch(65% 0.014 258);
   --color-white: oklch(100% 0 0);
   --font-display: 'Manrope', sans-serif;
   --font-body: 'Public Sans', sans-serif;
