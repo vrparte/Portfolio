@@ -4,6 +4,8 @@ Personal portfolio at **https://varadparte.com**, owned and hosted in `vrparte/P
 
 ## The current website
 
+The Experience, Projects, and Skills sections reproduce the supplied temporary portfolio: dates alongside jobs, a two-column project grid, and grouped skill pills. The original hero remains in place. Project descriptions are fully visible without expanding panels.
+
 The production website is in **`docs/`**. It is static HTML, CSS, and a small optional JavaScript file. No npm packages, API keys, server, subscriptions, or build framework are needed to serve it. Content is present in the initial HTML for search engines, accessibility, and visitors with JavaScript disabled. Fonts are self-hosted and their OFL licenses are included under `docs/assets/`.
 
 ```sh
@@ -19,7 +21,7 @@ Open http://localhost:4173.
 3. Run `node scripts/check-portfolio.mjs`.
 4. Commit and push both the content and generated HTML to `main`.
 
-Page structure is in `scripts/render-portfolio.mjs`. Visual styles are in `docs/assets/style.css`; palette and type tokens are in `docs/assets/tokens.css`. The résumé button opens the browser's print dialog; choose Save as PDF to export. It does not use the outdated PDF from the previous site.
+Page structure is in `scripts/render-portfolio.mjs`. Hero, education, and footer styles are in `docs/assets/style.css`; palette and type tokens are in `docs/assets/tokens.css`. The three copied sections have their own scoped stylesheet, `docs/assets/reference-sections.css`, and self-hosted Inter and Geist Mono fonts. The résumé button opens the browser's print dialog; choose Save as PDF to export. It does not use the outdated PDF from the previous site.
 
 ## Hosting and domain
 
@@ -31,4 +33,4 @@ To roll back, change Pages back to **`gh-pages` → `/`** in repository Settings
 
 ## Content provenance
 
-Professional content was carried over from the user-supplied temporary profile at https://tsenta.com/u/varad-parte. GitHub, LinkedIn, and email were verified against the existing portfolio. Project source links were checked against `vrparte/SentimentAnalysis` and `vrparte/CleverCollab`. No unverified source link is displayed for the hackathon project. Experience and education dates and supplied impact figures are retained from the temporary profile; edit the content file when they change.
+Professional content was carried over from the user-supplied temporary profile at https://tsenta.com/u/varad-parte. GitHub, LinkedIn, and email were verified against the existing portfolio. Project repository URLs retained in the content data were checked against `vrparte/SentimentAnalysis` and `vrparte/CleverCollab`. No unverified source link is displayed for the hackathon project. Experience and education dates and supplied impact figures are retained from the temporary profile; edit the content file when they change.

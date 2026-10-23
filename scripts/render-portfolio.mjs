@@ -1,8 +1,10 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 const c = JSON.parse(readFileSync(new URL('../docs/content.json', import.meta.url), 'utf8'));
 const esc = (s) => String(s).replace(/[&<>"']/g, x => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
-const tags = (items) => `<ul class="tags" aria-label="Technologies">${items.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`;
 const arrow = '<span aria-hidden="true">↗</span>';
+const referenceBullets = points => `<ul class="reference-bullets">${points.map(p=>`<li><span class="reference-bullet" aria-hidden="true"></span><span>${esc(p)}</span></li>`).join('')}</ul>`;
+const referenceTags = items => `<ul class="reference-tags" aria-label="Technologies">${items.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`;
+const sectionHeading = (number, title, id) => `<div class="reference-section-heading"><span class="reference-number">${number}</span><h2 id="${id}">${title}</h2></div>`;
 const html = `<!doctype html>
 <html lang="en">
 <head>
@@ -25,6 +27,7 @@ const html = `<!doctype html>
   <link rel="preload" href="assets/public-sans-latin.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="assets/tokens.css">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/reference-sections.css">
   <script src="assets/app.js" defer></script>
   <script type="application/ld+json">${JSON.stringify({'@context':'https://schema.org','@type':'Person',name:c.name,url:'https://varadparte.com/',jobTitle:c.role,sameAs:[c.github,c.linkedin],knowsAbout:['LLM engineering','RAG','Document intelligence','Agentic automation'],alumniOf:{'@type':'CollegeOrUniversity',name:'University of Cincinnati'}})}</script>
 </head>
@@ -34,7 +37,8 @@ const html = `<!doctype html>
     <a class="identity" href="#top" aria-label="Varad Parte, back to top"><span class="monogram" aria-hidden="true">vp<span>.</span></span><span>Varad Parte</span></a>
     <a class="contact-link" href="mailto:${esc(c.email)}">Get in touch ${arrow}</a>
   </header>
-  <main id="main" class="wrap">
+  <main id="main">
+    <div class="wrap">
     <section class="hero" id="top" aria-labelledby="name">
       <div class="hero-meta"><span class="role-label">${esc(c.role)}</span><span class="location"><span aria-hidden="true">⌖</span> ${esc(c.location)}</span></div>
       <h1 id="name">${esc(c.name)}<span class="name-period">.</span></h1>
@@ -47,45 +51,36 @@ const html = `<!doctype html>
         <button class="text-button print-button" type="button" hidden>Print résumé <span aria-hidden="true">↓</span></button>
       </div>
     </section>
-    <div class="document-layout">
-      <aside class="section-index" aria-label="On this page">
-        <nav aria-label="Portfolio sections"><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a></nav>
-        <p class="index-note">Grounded AI.<br>Practical engineering.</p>
-      </aside>
-      <div class="document-content">
-        <section id="experience" class="document-section" aria-labelledby="experience-heading">
-          <h2 id="experience-heading">Experience</h2>
-          ${c.experience.map((x,i)=>`<article class="job">
-            <div class="entry-meta"><span>${esc(x.start)} – ${esc(x.end)}</span>${i===0?'<span class="current-label">Current role</span>':''}</div>
-            <h3>${esc(x.role)}</h3><p class="company">${esc(x.company)}</p>
-            <ul class="bullet-list">${x.points.map(p=>`<li>${esc(p)}</li>`).join('')}</ul>${tags(x.tags)}
-          </article>`).join('')}
-        </section>
-        <section id="projects" class="document-section" aria-labelledby="projects-heading">
-          <div class="section-heading"><h2 id="projects-heading">Selected projects</h2><span class="section-caption">From signals to systems</span></div>
-          ${c.projects.map((x,i)=>`<article class="project">
-            <p class="project-type">${esc(x.type)}</p>
-            <h3>${esc(x.shortTitle)}</h3>
-            <p class="project-summary">${esc(x.summary)}</p>
-            ${tags(x.tags)}
-            <details class="project-detail">
-              <summary><span>Explore the build</span><span class="expand-icon" aria-hidden="true">+</span></summary>
-              <div class="detail-body"><h4>${esc(x.title)}</h4><ol class="system-flow" aria-label="System workflow">${x.flow.map(f=>`<li>${esc(f)}</li>`).join('')}</ol><ul class="bullet-list">${x.points.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>
-            </details>
-            ${x.url?`<a class="project-source" href="${esc(x.url)}" target="_blank" rel="noopener noreferrer" aria-label="View ${esc(x.shortTitle)} on GitHub">View source ${arrow}</a>`:''}
-          </article>`).join('')}
-        </section>
-        <section id="skills" class="document-section" aria-labelledby="skills-heading">
-          <h2 id="skills-heading">Tools & capabilities</h2>
-          <dl class="skill-list">${c.skills.map(x=>`<div><dt>${esc(x.category)}</dt><dd>${x.items.map(esc).join('<span class="skill-separator" aria-hidden="true"> / </span>')}</dd></div>`).join('')}</dl>
-        </section>
+    </div>
+    <div class="reference-container reference-content">
+      <section id="experience" class="reference-section" aria-labelledby="experience-heading">
+        ${sectionHeading('01','Experience','experience-heading')}
+        ${c.experience.map(x=>`<article class="reference-row">
+          <div class="reference-meta">${esc(x.start)} – ${esc(x.end)}</div>
+          <div><h3 class="reference-company">${esc(x.company)}</h3><p class="reference-role">${esc(x.role)}</p>${referenceBullets(x.points)}${referenceTags(x.tags)}</div>
+        </article>`).join('')}
+      </section>
+      <section id="projects" class="reference-section" aria-labelledby="projects-heading">
+        ${sectionHeading('02','Projects','projects-heading')}
+        <div class="reference-projects">${c.projects.map((x,i)=>`<article class="reference-card">
+          <div class="reference-card-top"><span class="reference-number">${String(i+1).padStart(2,'0')}</span></div>
+          <h3>${esc(x.title)}</h3>
+          ${x.points.length?referenceBullets(x.points):`<p class="reference-description">${esc(x.description)}</p>`}
+          ${referenceTags(x.tags)}
+        </article>`).join('')}</div>
+      </section>
+      <section id="skills" class="reference-section" aria-labelledby="skills-heading">
+        ${sectionHeading('03','Skills','skills-heading')}
+        <dl class="reference-skills">${c.skills.map(x=>`<div class="reference-row"><dt class="reference-meta"><span class="reference-category">${esc(x.category)}</span></dt><dd><ul class="reference-skill-tags">${x.items.map(item=>`<li>${esc(item)}</li>`).join('')}</ul></dd></div>`).join('')}</dl>
+      </section>
+    </div>
+    <div class="wrap education-wrap">
         <section id="education" class="document-section" aria-labelledby="education-heading">
           <h2 id="education-heading">Education</h2>
           ${c.education.map(x=>`<article class="education-entry"><p class="entry-meta">${esc(x.start)} – ${esc(x.end)}</p><h3>${esc(x.degree)}</h3><p class="company">${esc(x.school)}</p>${x.detail?`<p class="education-detail">${esc(x.detail)}</p>`:''}</article>`).join('')}
         </section>
-      </div>
     </div>
-    <section class="contact-section" id="contact" aria-labelledby="contact-heading"><div><h2 id="contact-heading">Let’s build something useful.</h2><p>Connect about applied AI, engineering, or a project you have in mind.</p></div><a class="email-link" href="mailto:${esc(c.email)}">${esc(c.email)} ${arrow}</a></section>
+    <section class="contact-section wrap" id="contact" aria-labelledby="contact-heading"><div><h2 id="contact-heading">Let’s build something useful.</h2><p>Connect about applied AI, engineering, or a project you have in mind.</p></div><a class="email-link" href="mailto:${esc(c.email)}">${esc(c.email)} ${arrow}</a></section>
   </main>
   <footer class="wrap site-footer"><p>© ${new Date().getUTCFullYear()} Varad Parte</p><div><a href="${esc(c.github)}" target="_blank" rel="noopener noreferrer">GitHub ${arrow}</a><a href="#top">Back to top ↑</a></div></footer>
 </body>

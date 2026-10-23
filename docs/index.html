@@ -20,6 +20,7 @@
   <link rel="preload" href="assets/public-sans-latin.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="assets/tokens.css">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/reference-sections.css">
   <script src="assets/app.js" defer></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Varad Parte","url":"https://varadparte.com/","jobTitle":"Applied AI Engineer","sameAs":["https://github.com/vrparte","https://www.linkedin.com/in/varadparte/"],"knowsAbout":["LLM engineering","RAG","Document intelligence","Agentic automation"],"alumniOf":{"@type":"CollegeOrUniversity","name":"University of Cincinnati"}}</script>
 </head>
@@ -29,7 +30,8 @@
     <a class="identity" href="#top" aria-label="Varad Parte, back to top"><span class="monogram" aria-hidden="true">vp<span>.</span></span><span>Varad Parte</span></a>
     <a class="contact-link" href="mailto:varad.parte@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
   </header>
-  <main id="main" class="wrap">
+  <main id="main">
+    <div class="wrap">
     <section class="hero" id="top" aria-labelledby="name">
       <div class="hero-meta"><span class="role-label">Applied AI Engineer</span><span class="location"><span aria-hidden="true">⌖</span> Cincinnati, Ohio</span></div>
       <h1 id="name">Varad Parte<span class="name-period">.</span></h1>
@@ -42,69 +44,49 @@
         <button class="text-button print-button" type="button" hidden>Print résumé <span aria-hidden="true">↓</span></button>
       </div>
     </section>
-    <div class="document-layout">
-      <aside class="section-index" aria-label="On this page">
-        <nav aria-label="Portfolio sections"><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a></nav>
-        <p class="index-note">Grounded AI.<br>Practical engineering.</p>
-      </aside>
-      <div class="document-content">
-        <section id="experience" class="document-section" aria-labelledby="experience-heading">
-          <h2 id="experience-heading">Experience</h2>
-          <article class="job">
-            <div class="entry-meta"><span>May 2026 – Present</span><span class="current-label">Current role</span></div>
-            <h3>AI/ML Developer Intern</h3><p class="company">Phillips Edison &amp; Company</p>
-            <ul class="bullet-list"><li>Built an internal document-intelligence platform with Azure Document Intelligence, OCR, and Python to convert scanned lease PDFs into searchable enterprise knowledge and structured metadata.</li><li>Developed custom AI skills that turn recurring IT and business workflows into repeatable, agent-executable tasks.</li><li>Built an internal AI Wiki that structures business context so agents retrieve grounded information when executing business tasks.</li><li>Partner with IT stakeholders on AI improvements across Azure Cosmos DB, Azure Logic Apps, and Power BI.</li></ul><ul class="tags" aria-label="Technologies"><li>Python</li><li>Azure Document Intelligence</li><li>OCR</li><li>Azure Cosmos DB</li><li>Azure Logic Apps</li><li>Power BI</li></ul>
-          </article><article class="job">
-            <div class="entry-meta"><span>Jan 2023 – Sep 2023</span></div>
-            <h3>Enterprise Applications Intern</h3><p class="company">Phillips Edison &amp; Company</p>
-            <ul class="bullet-list"><li>Designed document-ingestion and extraction workflows to normalize OCR output, segment legal clauses, and extract lease terms, dates, and escalation schedules, reducing manual review time by over 53%.</li><li>Developed internal applications with SQL, Python, REST APIs, and database-backed workflows. Expanded QA and audit coverage contributed to a 27% reduction in application downtime.</li><li>Worked with leasing stakeholders, QA teams, and senior engineers to translate business workflows into automation and validation logic, with deployment workflows across Dev, QA, and Production.</li></ul><ul class="tags" aria-label="Technologies"><li>SQL</li><li>Python</li><li>REST APIs</li><li>Power Automate</li><li>Azure DevOps</li><li>CI/CD</li></ul>
-          </article>
-        </section>
-        <section id="projects" class="document-section" aria-labelledby="projects-heading">
-          <div class="section-heading"><h2 id="projects-heading">Selected projects</h2><span class="section-caption">From signals to systems</span></div>
-          <article class="project">
-            <p class="project-type">LLM engineering · Data pipelines</p>
-            <h3>Risk &amp; sentiment monitoring</h3>
-            <p class="project-summary">A GenAI platform that turns web and news coverage into entity-matched sentiment signals, reputational-risk assessments, and stakeholder-ready reports.</p>
-            <ul class="tags" aria-label="Technologies"><li>FastAPI</li><li>Celery</li><li>Redis</li><li>PostgreSQL</li><li>LLMs</li></ul>
-            <details class="project-detail">
-              <summary><span>Explore the build</span><span class="expand-icon" aria-hidden="true">+</span></summary>
-              <div class="detail-body"><h4>Enterprise GenAI Risk &amp; Sentiment Monitoring</h4><ol class="system-flow" aria-label="System workflow"><li>Web &amp; news</li><li>Entity matching</li><li>Classification</li><li>Reports &amp; review</li></ol><ul class="bullet-list"><li>Built a modular FastAPI backend with Celery, Redis, and PostgreSQL, including provider abstraction, deduplication, and confidence-based entity resolution.</li><li>Implemented LLM-assisted classification and schema-validated structured outputs, with auditable metadata and human review.</li></ul></div>
-            </details>
-            <a class="project-source" href="https://github.com/vrparte/SentimentAnalysis" target="_blank" rel="noopener noreferrer" aria-label="View Risk &amp; sentiment monitoring on GitHub">View source <span aria-hidden="true">↗</span></a>
-          </article><article class="project">
-            <p class="project-type">AI agents · Retrieval</p>
-            <h3>Multi-agent project management</h3>
-            <p class="project-summary">A tool-using AI assistant that coordinates Jira operations, ticket routing, and workload distribution through natural-language queries.</p>
-            <ul class="tags" aria-label="Technologies"><li>CrewAI</li><li>Langflow</li><li>GPT</li><li>Jira</li></ul>
-            <details class="project-detail">
-              <summary><span>Explore the build</span><span class="expand-icon" aria-hidden="true">+</span></summary>
-              <div class="detail-body"><h4>Multi-Agent AI Assistant for Project Management</h4><ol class="system-flow" aria-label="System workflow"><li>Team query</li><li>Agent orchestration</li><li>Jira tools</li><li>Grounded response</li></ol><ul class="bullet-list"><li>Architected multi-agent orchestration with CrewAI, Langflow, and LLMs, plus persistent memory and retrieval for project status and dependency insights.</li><li>Designed reusable prompts, context flows, and retrieval patterns that reduced manual project-management effort by 40%.</li></ul></div>
-            </details>
-            <a class="project-source" href="https://github.com/vrparte/CleverCollab" target="_blank" rel="noopener noreferrer" aria-label="View Multi-agent project management on GitHub">View source <span aria-hidden="true">↗</span></a>
-          </article><article class="project">
-            <p class="project-type">Full-stack engineering</p>
-            <h3>Hackathon operations</h3>
-            <p class="project-summary">An event operations platform supporting registration, judging, and live-event workflows for hundreds of participants.</p>
-            <ul class="tags" aria-label="Technologies"><li>Next.js</li><li>Node.js</li><li>KeystoneJS</li><li>GraphQL</li></ul>
-            <details class="project-detail">
-              <summary><span>Explore the build</span><span class="expand-icon" aria-hidden="true">+</span></summary>
-              <div class="detail-body"><h4>Full-Stack Hackathon Operations Platform</h4><ol class="system-flow" aria-label="System workflow"><li>Registration</li><li>Event workflows</li><li>Judging</li><li>Results</li></ol><ul class="bullet-list"><li>Built with Next.js, Node.js, KeystoneJS, and GraphQL to support the full event lifecycle.</li></ul></div>
-            </details>
-            
-          </article>
-        </section>
-        <section id="skills" class="document-section" aria-labelledby="skills-heading">
-          <h2 id="skills-heading">Tools & capabilities</h2>
-          <dl class="skill-list"><div><dt>Applied AI &amp; GenAI</dt><dd>LLM APIs<span class="skill-separator" aria-hidden="true"> / </span>RAG pipelines<span class="skill-separator" aria-hidden="true"> / </span>LangChain<span class="skill-separator" aria-hidden="true"> / </span>Prompt engineering<span class="skill-separator" aria-hidden="true"> / </span>Context design<span class="skill-separator" aria-hidden="true"> / </span>Structured outputs<span class="skill-separator" aria-hidden="true"> / </span>Agentic workflows<span class="skill-separator" aria-hidden="true"> / </span>CrewAI<span class="skill-separator" aria-hidden="true"> / </span>Langflow<span class="skill-separator" aria-hidden="true"> / </span>AI evaluation<span class="skill-separator" aria-hidden="true"> / </span>Hallucination mitigation<span class="skill-separator" aria-hidden="true"> / </span>Human-in-the-loop review</dd></div><div><dt>Document intelligence &amp; data</dt><dd>OCR<span class="skill-separator" aria-hidden="true"> / </span>Azure Document Intelligence<span class="skill-separator" aria-hidden="true"> / </span>Document ingestion<span class="skill-separator" aria-hidden="true"> / </span>Metadata extraction<span class="skill-separator" aria-hidden="true"> / </span>Entity resolution<span class="skill-separator" aria-hidden="true"> / </span>Retrieval workflows<span class="skill-separator" aria-hidden="true"> / </span>Sentiment &amp; risk classification<span class="skill-separator" aria-hidden="true"> / </span>Pandas<span class="skill-separator" aria-hidden="true"> / </span>NumPy</dd></div><div><dt>Languages</dt><dd>Python<span class="skill-separator" aria-hidden="true"> / </span>JavaScript / TypeScript<span class="skill-separator" aria-hidden="true"> / </span>SQL<span class="skill-separator" aria-hidden="true"> / </span>Java<span class="skill-separator" aria-hidden="true"> / </span>C++<span class="skill-separator" aria-hidden="true"> / </span>.NET<span class="skill-separator" aria-hidden="true"> / </span>HTML / CSS</dd></div><div><dt>Backend &amp; APIs</dt><dd>FastAPI<span class="skill-separator" aria-hidden="true"> / </span>Django<span class="skill-separator" aria-hidden="true"> / </span>Node.js<span class="skill-separator" aria-hidden="true"> / </span>REST APIs<span class="skill-separator" aria-hidden="true"> / </span>GraphQL<span class="skill-separator" aria-hidden="true"> / </span>Celery<span class="skill-separator" aria-hidden="true"> / </span>Redis<span class="skill-separator" aria-hidden="true"> / </span>JSON</dd></div><div><dt>Frontend</dt><dd>React<span class="skill-separator" aria-hidden="true"> / </span>Next.js<span class="skill-separator" aria-hidden="true"> / </span>Svelte<span class="skill-separator" aria-hidden="true"> / </span>TypeScript</dd></div><div><dt>Databases</dt><dd>PostgreSQL<span class="skill-separator" aria-hidden="true"> / </span>MySQL<span class="skill-separator" aria-hidden="true"> / </span>SQL query design<span class="skill-separator" aria-hidden="true"> / </span>Supabase<span class="skill-separator" aria-hidden="true"> / </span>Azure Cosmos DB</dd></div><div><dt>Cloud, DevOps &amp; tools</dt><dd>Azure DevOps<span class="skill-separator" aria-hidden="true"> / </span>Azure Logic Apps<span class="skill-separator" aria-hidden="true"> / </span>Git<span class="skill-separator" aria-hidden="true"> / </span>CI/CD<span class="skill-separator" aria-hidden="true"> / </span>Docker<span class="skill-separator" aria-hidden="true"> / </span>Kubernetes<span class="skill-separator" aria-hidden="true"> / </span>Microsoft Power Apps</dd></div></dl>
-        </section>
+    </div>
+    <div class="reference-container reference-content">
+      <section id="experience" class="reference-section" aria-labelledby="experience-heading">
+        <div class="reference-section-heading"><span class="reference-number">01</span><h2 id="experience-heading">Experience</h2></div>
+        <article class="reference-row">
+          <div class="reference-meta">May 2026 – Present</div>
+          <div><h3 class="reference-company">Phillips Edison &amp; Company</h3><p class="reference-role">AI/ML Developer Intern</p><ul class="reference-bullets"><li><span class="reference-bullet" aria-hidden="true"></span><span>Built an internal AI document-intelligence platform using Azure Document Intelligence, OCR, Python, and structured metadata extraction to convert scanned lease PDFs into searchable enterprise knowledge.</span></li><li><span class="reference-bullet" aria-hidden="true"></span><span>Designed and developed custom AI skills that compress recurring IT and business workflows into repeatable, agent-executable tasks, cutting manual effort on routine internal processes.</span></li><li><span class="reference-bullet" aria-hidden="true"></span><span>Built an internal AI Wiki that makes enterprise data AI-ready, structuring business context so AI agents executing business tasks retrieve grounded information rather than inferring it.</span></li><li><span class="reference-bullet" aria-hidden="true"></span><span>Partner with IT stakeholders to deliver strategic AI improvements across Azure Cosmos DB, Azure Logic Apps, Power BI.</span></li></ul><ul class="reference-tags" aria-label="Technologies"><li>Azure Document Intelligence</li><li>OCR</li><li>Python</li><li>Azure Cosmos DB</li><li>Azure Logic Apps</li><li>Power BI</li></ul></div>
+        </article><article class="reference-row">
+          <div class="reference-meta">Jan 2023 – Sep 2023</div>
+          <div><h3 class="reference-company">Phillips Edison &amp; Company</h3><p class="reference-role">Enterprise Applications Intern</p><ul class="reference-bullets"><li><span class="reference-bullet" aria-hidden="true"></span><span>Designed document-ingestion and extraction workflows to normalize OCR output, segment legal clauses, capture metadata, and extract lease terms, dates, and escalation schedules, reducing manual review time by over 53%.</span></li><li><span class="reference-bullet" aria-hidden="true"></span><span>Developed and supported internal business applications using SQL, Python, REST APIs, and database-backed workflows across multiple enterprise teams, improving reliability through expanded QA and audit coverage and contributing to a 27% reduction in application downtime.</span></li><li><span class="reference-bullet" aria-hidden="true"></span><span>Partnered with leasing stakeholders, QA teams, and senior engineers to translate business workflows into automation and validation logic, and built deployment workflows with Python, Power Automate, Azure DevOps, and CI/CD across Dev → QA → Production.</span></li></ul><ul class="reference-tags" aria-label="Technologies"><li>OCR</li><li>SQL</li><li>Python</li><li>REST APIs</li><li>Power Automate</li><li>Azure DevOps</li><li>CI/CD</li></ul></div>
+        </article>
+      </section>
+      <section id="projects" class="reference-section" aria-labelledby="projects-heading">
+        <div class="reference-section-heading"><span class="reference-number">02</span><h2 id="projects-heading">Projects</h2></div>
+        <div class="reference-projects"><article class="reference-card">
+          <div class="reference-card-top"><span class="reference-number">01</span></div>
+          <h3>Enterprise GenAI Risk &amp; Sentiment Monitoring Platform</h3>
+          <ul class="reference-bullets"><li><span class="reference-bullet" aria-hidden="true"></span><span>Built a GenAI platform that aggregates web and news sources, performs entity matching, and runs diagnostic models to classify sentiment and reputational-risk signals, generating stakeholder-ready reports.</span></li><li><span class="reference-bullet" aria-hidden="true"></span><span>Designed a modular backend using FastAPI, Celery, Redis, and PostgreSQL with provider abstraction, deduplication, confidence-based entity resolution, and structured, auditable metadata.</span></li><li><span class="reference-bullet" aria-hidden="true"></span><span>Implemented LLM-assisted classification, retrieval, alerting/observability signals, and schema-validated structured-output pipelines to support summarization, human review, and decision-making.</span></li></ul>
+          <ul class="reference-tags" aria-label="Technologies"><li>FastAPI</li><li>Celery</li><li>Redis</li><li>PostgreSQL</li></ul>
+        </article><article class="reference-card">
+          <div class="reference-card-top"><span class="reference-number">02</span></div>
+          <h3>Multi-Agent AI Assistant for Project Management</h3>
+          <ul class="reference-bullets"><li><span class="reference-bullet" aria-hidden="true"></span><span>Architected a multi-agent, tool-using AI assistant with CrewAI, Langflow, and LLM-based orchestration to coordinate Jira operations, ticket routing, and workload distribution.</span></li><li><span class="reference-bullet" aria-hidden="true"></span><span>Built a GPT-based conversational assistant with persistent memory and retrieval to provide project status, dependency insights, and risk-aware natural-language queries.</span></li><li><span class="reference-bullet" aria-hidden="true"></span><span>Designed reusable prompts, context flows, and retrieval patterns that reduced manual project-management effort by 40%.</span></li></ul>
+          <ul class="reference-tags" aria-label="Technologies"><li>CrewAI</li><li>Langflow</li><li>GPT</li><li>LLM</li></ul>
+        </article><article class="reference-card">
+          <div class="reference-card-top"><span class="reference-number">03</span></div>
+          <h3>Full-Stack Hackathon Operations Platform</h3>
+          <p class="reference-description">Built a full-stack event operations platform (Next.js, Node.js, KeystoneJS, GraphQL) supporting registration, judging, and live-event workflows for hundreds of participants.</p>
+          <ul class="reference-tags" aria-label="Technologies"><li>Next.js</li><li>Node.js</li><li>KeystoneJS</li><li>GraphQL</li></ul>
+        </article></div>
+      </section>
+      <section id="skills" class="reference-section" aria-labelledby="skills-heading">
+        <div class="reference-section-heading"><span class="reference-number">03</span><h2 id="skills-heading">Skills</h2></div>
+        <dl class="reference-skills"><div class="reference-row"><dt class="reference-meta"><span class="reference-category">Languages</span></dt><dd><ul class="reference-skill-tags"><li>Python</li><li>JavaScript/TypeScript</li><li>SQL</li><li>Java</li><li>C++</li><li>.NET</li><li>HTML/CSS</li></ul></dd></div><div class="reference-row"><dt class="reference-meta"><span class="reference-category">Applied AI &amp; GenAI</span></dt><dd><ul class="reference-skill-tags"><li>LLM APIs</li><li>RAG pipelines</li><li>LangChain</li><li>prompt engineering</li><li>context design</li><li>structured outputs</li><li>agentic workflows</li><li>CrewAI</li><li>Langflow</li><li>AI evaluation</li><li>hallucination mitigation</li><li>human-in-the-loop review</li></ul></dd></div><div class="reference-row"><dt class="reference-meta"><span class="reference-category">Document Intelligence &amp; Data</span></dt><dd><ul class="reference-skill-tags"><li>OCR</li><li>Azure Document Intelligence</li><li>document ingestion</li><li>metadata extraction</li><li>entity resolution</li><li>retrieval workflows</li><li>sentiment/risk classification</li><li>Pandas</li><li>NumPy</li></ul></dd></div><div class="reference-row"><dt class="reference-meta"><span class="reference-category">Backend &amp; APIs</span></dt><dd><ul class="reference-skill-tags"><li>FastAPI</li><li>Django Python Framework</li><li>Node.js</li><li>REST APIs</li><li>GraphQL</li><li>Celery</li><li>Redis</li><li>JSON</li></ul></dd></div><div class="reference-row"><dt class="reference-meta"><span class="reference-category">Frontend</span></dt><dd><ul class="reference-skill-tags"><li>React.js</li><li>Next.js</li><li>Svelte</li><li>TypeScript</li></ul></dd></div><div class="reference-row"><dt class="reference-meta"><span class="reference-category">Databases</span></dt><dd><ul class="reference-skill-tags"><li>PostgreSQL</li><li>MySQL</li><li>SQL query design</li><li>Supabase</li><li>Azure CosmosDB</li></ul></dd></div><div class="reference-row"><dt class="reference-meta"><span class="reference-category">Cloud, DevOps &amp; Tools</span></dt><dd><ul class="reference-skill-tags"><li>Azure DevOps</li><li>Azure Logic Apps</li><li>Git</li><li>CI/CD</li><li>Docker</li><li>Kubernetes</li><li>Microsoft Power Apps</li></ul></dd></div></dl>
+      </section>
+    </div>
+    <div class="wrap education-wrap">
         <section id="education" class="document-section" aria-labelledby="education-heading">
           <h2 id="education-heading">Education</h2>
           <article class="education-entry"><p class="entry-meta">Aug 2021 – May 2026</p><h3>Master of Science, Data Science</h3><p class="company">University of Cincinnati</p><p class="education-detail">Accelerated Program · GPA 3.9 / 4.0</p></article><article class="education-entry"><p class="entry-meta">Aug 2021 – May 2026</p><h3>Bachelor of Science, Computer Science</h3><p class="company">University of Cincinnati</p></article>
         </section>
-      </div>
     </div>
-    <section class="contact-section" id="contact" aria-labelledby="contact-heading"><div><h2 id="contact-heading">Let’s build something useful.</h2><p>Connect about applied AI, engineering, or a project you have in mind.</p></div><a class="email-link" href="mailto:varad.parte@gmail.com">varad.parte@gmail.com <span aria-hidden="true">↗</span></a></section>
+    <section class="contact-section wrap" id="contact" aria-labelledby="contact-heading"><div><h2 id="contact-heading">Let’s build something useful.</h2><p>Connect about applied AI, engineering, or a project you have in mind.</p></div><a class="email-link" href="mailto:varad.parte@gmail.com">varad.parte@gmail.com <span aria-hidden="true">↗</span></a></section>
   </main>
   <footer class="wrap site-footer"><p>© 2026 Varad Parte</p><div><a href="https://github.com/vrparte" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="#top">Back to top ↑</a></div></footer>
 </body>
