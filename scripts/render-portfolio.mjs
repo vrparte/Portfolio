@@ -1,6 +1,8 @@
 import { readFileSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 const c = JSON.parse(readFileSync(new URL('../docs/content.json', import.meta.url), 'utf8'));
 const esc = (s) => String(s).replace(/[&<>"']/g, x => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
+const asset = path => `${path}?v=${createHash('sha256').update(readFileSync(new URL(`../docs/${path}`, import.meta.url))).digest('hex').slice(0, 10)}`;
 const arrow = '<span aria-hidden="true">↗</span>';
 const referenceBullets = points => `<ul class="reference-bullets">${points.map(p=>`<li><span class="reference-bullet" aria-hidden="true"></span><span>${esc(p)}</span></li>`).join('')}</ul>`;
 const referenceTags = items => `<ul class="reference-tags" aria-label="Technologies">${items.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`;
@@ -25,17 +27,19 @@ const html = `<!doctype html>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/manrope-latin.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="assets/public-sans-latin.woff" as="font" type="font/woff" crossorigin>
-  <link rel="stylesheet" href="assets/tokens.css">
-  <link rel="stylesheet" href="assets/style.css">
-  <link rel="stylesheet" href="assets/reference-sections.css">
+  <link rel="stylesheet" href="${asset('assets/tokens.css')}">
+  <link rel="stylesheet" href="${asset('assets/style.css')}">
+  <link rel="stylesheet" href="${asset('assets/reference-sections.css')}">
   <script src="assets/app.js" defer></script>
   <script type="application/ld+json">${JSON.stringify({'@context':'https://schema.org','@type':'Person',name:c.name,url:'https://varadparte.com/',jobTitle:c.role,sameAs:[c.github,c.linkedin],knowsAbout:['LLM engineering','RAG','Document intelligence','Agentic automation'],alumniOf:{'@type':'CollegeOrUniversity',name:'University of Cincinnati'}})}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header wrap">
+  <header class="topbar">
+  <div class="site-header wrap">
     <a class="identity" href="#top" aria-label="Varad Parte, back to top"><span class="monogram" aria-hidden="true">vp<span>.</span></span><span>Varad Parte</span></a>
     <a class="contact-link" href="mailto:${esc(c.email)}">Get in touch ${arrow}</a>
+  </div>
   </header>
   <main id="main">
     <div class="wrap">
