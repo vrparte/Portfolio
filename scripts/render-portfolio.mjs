@@ -42,6 +42,13 @@ const html = `<!doctype html>
     <section class="hero" id="top" aria-labelledby="name">
       <div class="hero-meta"><span class="role-label">${esc(c.role)}</span><span class="location"><span aria-hidden="true">⌖</span> ${esc(c.location)}</span></div>
       <h1 id="name">${esc(c.name)}<span class="name-period">.</span></h1>
+      <figure class="hero-portrait">
+        <img src="assets/varad-parte-headshot-960.webp"
+          srcset="assets/varad-parte-headshot-480.webp 480w, assets/varad-parte-headshot-960.webp 960w"
+          sizes="(min-width: 1024px) 308px, (min-width: 768px) 220px, 96px"
+          width="960" height="960" alt="Professional headshot of Varad Parte"
+          fetchpriority="high" decoding="async">
+      </figure>
       <p class="intro">${esc(c.intro)}</p>
       <p class="about">${esc(c.about)}</p>
       <div class="hero-links">

@@ -14,6 +14,10 @@ python3 -m http.server 4173 --directory docs
 
 Open http://localhost:4173.
 
+## Headshot
+
+The landing page uses responsive WebP copies of the supplied professional photo in `docs/assets/varad-parte-headshot-480.webp` and `docs/assets/varad-parte-headshot-960.webp`. The original image is not published. The photo appears beside the introduction on desktop and beside the name on mobile; it is omitted from the printable résumé.
+
 ## Update your profile
 
 1. Edit `docs/content.json` (experience, projects, skills, education, contact links).
