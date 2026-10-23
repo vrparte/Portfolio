@@ -1,0 +1,88 @@
+{
+  "name": "Varad Parte",
+  "role": "Applied AI Engineer",
+  "location": "Cincinnati, Ohio",
+  "email": "varad.parte@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/varadparte/",
+  "github": "https://github.com/vrparte",
+  "intro": "I build AI systems that turn unstructured documents and enterprise data into searchable knowledge, structured outputs, and reliable workflows.",
+  "about": "My work spans LLM engineering, retrieval-augmented generation, document intelligence, and agentic automation. I build with Python and Azure, with an emphasis on grounding, evaluation, and human-in-the-loop review.",
+  "experience": [
+    {
+      "company": "Phillips Edison & Company",
+      "role": "AI/ML Developer Intern",
+      "start": "May 2026",
+      "end": "Present",
+      "points": [
+        "Built an internal document-intelligence platform with Azure Document Intelligence, OCR, and Python to convert scanned lease PDFs into searchable enterprise knowledge and structured metadata.",
+        "Developed custom AI skills that turn recurring IT and business workflows into repeatable, agent-executable tasks.",
+        "Built an internal AI Wiki that structures business context so agents retrieve grounded information when executing business tasks.",
+        "Partner with IT stakeholders on AI improvements across Azure Cosmos DB, Azure Logic Apps, and Power BI."
+      ],
+      "tags": ["Python", "Azure Document Intelligence", "OCR", "Azure Cosmos DB", "Azure Logic Apps", "Power BI"]
+    },
+    {
+      "company": "Phillips Edison & Company",
+      "role": "Enterprise Applications Intern",
+      "start": "Jan 2023",
+      "end": "Sep 2023",
+      "points": [
+        "Designed document-ingestion and extraction workflows to normalize OCR output, segment legal clauses, and extract lease terms, dates, and escalation schedules, reducing manual review time by over 53%.",
+        "Developed internal applications with SQL, Python, REST APIs, and database-backed workflows. Expanded QA and audit coverage contributed to a 27% reduction in application downtime.",
+        "Worked with leasing stakeholders, QA teams, and senior engineers to translate business workflows into automation and validation logic, with deployment workflows across Dev, QA, and Production."
+      ],
+      "tags": ["SQL", "Python", "REST APIs", "Power Automate", "Azure DevOps", "CI/CD"]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Enterprise GenAI Risk & Sentiment Monitoring",
+      "shortTitle": "Risk & sentiment monitoring",
+      "type": "LLM engineering · Data pipelines",
+      "summary": "A GenAI platform that turns web and news coverage into entity-matched sentiment signals, reputational-risk assessments, and stakeholder-ready reports.",
+      "points": [
+        "Built a modular FastAPI backend with Celery, Redis, and PostgreSQL, including provider abstraction, deduplication, and confidence-based entity resolution.",
+        "Implemented LLM-assisted classification and schema-validated structured outputs, with auditable metadata and human review."
+      ],
+      "tags": ["FastAPI", "Celery", "Redis", "PostgreSQL", "LLMs"],
+      "url": "https://github.com/vrparte/SentimentAnalysis",
+      "flow": ["Web & news", "Entity matching", "Classification", "Reports & review"]
+    },
+    {
+      "title": "Multi-Agent AI Assistant for Project Management",
+      "shortTitle": "Multi-agent project management",
+      "type": "AI agents · Retrieval",
+      "summary": "A tool-using AI assistant that coordinates Jira operations, ticket routing, and workload distribution through natural-language queries.",
+      "points": [
+        "Architected multi-agent orchestration with CrewAI, Langflow, and LLMs, plus persistent memory and retrieval for project status and dependency insights.",
+        "Designed reusable prompts, context flows, and retrieval patterns that reduced manual project-management effort by 40%."
+      ],
+      "tags": ["CrewAI", "Langflow", "GPT", "Jira"],
+      "url": "https://github.com/vrparte/CleverCollab",
+      "flow": ["Team query", "Agent orchestration", "Jira tools", "Grounded response"]
+    },
+    {
+      "title": "Full-Stack Hackathon Operations Platform",
+      "shortTitle": "Hackathon operations",
+      "type": "Full-stack engineering",
+      "summary": "An event operations platform supporting registration, judging, and live-event workflows for hundreds of participants.",
+      "points": ["Built with Next.js, Node.js, KeystoneJS, and GraphQL to support the full event lifecycle."],
+      "tags": ["Next.js", "Node.js", "KeystoneJS", "GraphQL"],
+      "url": null,
+      "flow": ["Registration", "Event workflows", "Judging", "Results"]
+    }
+  ],
+  "skills": [
+    {"category": "Applied AI & GenAI", "items": ["LLM APIs", "RAG pipelines", "LangChain", "Prompt engineering", "Context design", "Structured outputs", "Agentic workflows", "CrewAI", "Langflow", "AI evaluation", "Hallucination mitigation", "Human-in-the-loop review"]},
+    {"category": "Document intelligence & data", "items": ["OCR", "Azure Document Intelligence", "Document ingestion", "Metadata extraction", "Entity resolution", "Retrieval workflows", "Sentiment & risk classification", "Pandas", "NumPy"]},
+    {"category": "Languages", "items": ["Python", "JavaScript / TypeScript", "SQL", "Java", "C++", ".NET", "HTML / CSS"]},
+    {"category": "Backend & APIs", "items": ["FastAPI", "Django", "Node.js", "REST APIs", "GraphQL", "Celery", "Redis", "JSON"]},
+    {"category": "Frontend", "items": ["React", "Next.js", "Svelte", "TypeScript"]},
+    {"category": "Databases", "items": ["PostgreSQL", "MySQL", "SQL query design", "Supabase", "Azure Cosmos DB"]},
+    {"category": "Cloud, DevOps & tools", "items": ["Azure DevOps", "Azure Logic Apps", "Git", "CI/CD", "Docker", "Kubernetes", "Microsoft Power Apps"]}
+  ],
+  "education": [
+    {"school": "University of Cincinnati", "degree": "Master of Science, Data Science", "detail": "Accelerated Program · GPA 3.9 / 4.0", "start": "Aug 2021", "end": "May 2026"},
+    {"school": "University of Cincinnati", "degree": "Bachelor of Science, Computer Science", "detail": "", "start": "Aug 2021", "end": "May 2026"}
+  ]
+}
