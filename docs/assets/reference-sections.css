@@ -1,0 +1,65 @@
+/* Reproduces the three sections explicitly selected by Varad from his temporary portfolio.
+   Scoped to preserve the existing hero, education, and footer. */
+@font-face {font-family:'Reference Inter';font-style:normal;font-weight:200 800;font-display:swap;src:url('reference-inter-variable.woff2') format('woff2')}
+@font-face {font-family:'Reference Inter';font-style:normal;font-weight:400;font-display:swap;src:url('reference-inter-regular.woff2') format('woff2')}
+@font-face {font-family:'Reference Geist Mono';font-style:normal;font-weight:400;font-display:swap;src:url('reference-geist-mono.woff2') format('woff2')}
+.reference-container {max-width:1200px;margin:0 auto;padding:0 48px}
+.reference-content {
+  --reference-fog:#b1b0b0;
+  --reference-gravel:#777169;
+  --reference-cinder:#575343;
+  --reference-powder:#f5f3f1;
+  --reference-chalk:#e5e5e5;
+  --reference-ink:#000;
+  --reference-card:#fff;
+  --reference-shadow:#0006 0px 0px 1.143px 0px, #0000000a 0px 2px 4px 0px;
+  font-family:'Reference Inter',sans-serif;font-weight:400;font-size:14px;line-height:1.43;letter-spacing:.1px;color:var(--reference-ink)
+}
+.reference-content p,.reference-content h2,.reference-content h3 {text-wrap:wrap}
+.reference-content h2,.reference-content h3 {font-family:inherit;font-weight:400;letter-spacing:-.02em}
+.reference-section {padding-top:56px;padding-bottom:8px;scroll-margin-top:24px}
+.reference-section-heading {display:flex;align-items:baseline;gap:14px;margin-bottom:28px}
+.reference-section-heading h2 {font-size:clamp(24px,3vw,30px);margin:0;line-height:1.05}
+.reference-number {font-family:'Reference Geist Mono',monospace;font-size:13px;color:var(--reference-fog);letter-spacing:.5px}
+.reference-row {display:grid;grid-template-columns:150px minmax(0,1fr);gap:32px;padding-block:28px}
+.reference-row+.reference-row {border-top:1px solid var(--reference-chalk)}
+.reference-meta {font-family:'Reference Geist Mono',monospace;font-size:13px;color:var(--reference-gravel);line-height:1.5;letter-spacing:.1px}
+.reference-content .reference-company {font-size:22px;margin:0;line-height:1.2}
+.reference-role {margin:6px 0 0;font-size:15px;font-weight:500;color:var(--reference-gravel);line-height:1.43}
+.reference-bullets {list-style:none;margin:12px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
+.reference-bullets li {display:flex;gap:12px;font-size:15px;line-height:1.6;color:var(--reference-cinder)}
+.reference-bullet {flex-shrink:0;width:5px;height:5px;border-radius:50%;background:var(--reference-fog);margin-top:9px}
+.reference-tags {list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 0}
+.reference-tags li {display:inline-flex;align-items:center;padding:3px 10px;border-radius:7px;background:var(--reference-powder);color:var(--reference-cinder);font-size:12.5px;letter-spacing:.1px;line-height:1.43}
+.reference-projects {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.reference-card {background:var(--reference-card);border:1px solid var(--reference-chalk);border-radius:16px;padding:26px;display:flex;flex-direction:column;transition:border-color 200ms var(--ease-out),box-shadow 200ms var(--ease-out),transform 200ms var(--ease-out)}
+.reference-card:hover {border-color:var(--reference-fog);box-shadow:var(--reference-shadow);transform:translateY(-3px)}
+.reference-card-top {display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.reference-card .reference-number {font-size:12px}
+.reference-card h3 {font-size:20px;margin:14px 0 0;line-height:1.25}
+.reference-card .reference-tags {margin-top:16px}
+.reference-description {margin:10px 0 0;font-size:15px;line-height:1.6;color:var(--reference-gravel)}
+.reference-skills {margin:0}
+.reference-skills dd {margin:0}
+.reference-category {font-family:'Reference Inter',sans-serif;font-size:14px;color:var(--reference-ink);font-weight:700;letter-spacing:.7px}
+.reference-skill-tags {list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0}
+.reference-skill-tags li {display:inline-flex;align-items:center;padding:5px 13px;border-radius:9999px;background:var(--reference-powder);border:1px solid var(--reference-chalk);color:var(--reference-ink);font-size:14px;letter-spacing:.1px;line-height:1.43}
+.education-wrap {padding-top:56px}
+@media(max-width:1024px) {.reference-container {padding-inline:32px}}
+@media(max-width:720px) {.reference-row {grid-template-columns:minmax(0,1fr);gap:8px}.reference-projects {grid-template-columns:minmax(0,1fr)}}
+@media(max-width:640px) {.reference-container {padding-inline:20px}}
+@media(prefers-reduced-motion:reduce) {.reference-card {transition:none}.reference-card:hover {transform:none}}
+@media print {
+  .reference-container {max-width:none;padding:0}
+  .reference-section {padding-top:1rem;padding-bottom:0}
+  .reference-section-heading {margin-bottom:.5rem;break-after:avoid}
+  .reference-section-heading h2 {font-size:16pt}
+  .reference-row {padding-block:.75rem;gap:1rem;grid-template-columns:100px minmax(0,1fr)}
+  .reference-content .reference-company,.reference-card h3 {font-size:11pt}
+  .reference-projects {display:block}
+  .reference-card {padding:12px;margin-bottom:12px;break-inside:avoid}
+  .reference-bullets li,.reference-description,.reference-role {font-size:9pt}
+  .reference-skill-tags li,.reference-tags li {font-size:8pt;padding:2px 6px}
+  .reference-meta,.reference-category,.reference-number {font-size:8pt}
+  .education-wrap {padding-top:1rem}
+}
