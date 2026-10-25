@@ -16,7 +16,7 @@ Open http://localhost:4173.
 
 ## Headshot
 
-The landing page uses responsive WebP copies of the supplied professional photo in `docs/assets/varad-parte-headshot-480.webp` and `docs/assets/varad-parte-headshot-960.webp`. The original image is not published. The photo appears beside the introduction on desktop and beside the name on mobile; it is omitted from the printable résumé.
+The landing page uses responsive WebP copies of the supplied professional photo in `docs/assets/varad-parte-headshot-480.webp` and `docs/assets/varad-parte-headshot-960.webp`. The original image is not published. The photo appears beside the introduction on desktop and beside the name on mobile; the downloadable résumé is the separate PDF provided by Varad.
 
 ## Update your profile
 
@@ -25,7 +25,7 @@ The landing page uses responsive WebP copies of the supplied professional photo 
 3. Run `node scripts/check-portfolio.mjs`.
 4. Commit and push both the content and generated HTML to `main`.
 
-Page structure is in `scripts/render-portfolio.mjs`. Hero, education, and footer styles are in `docs/assets/style.css`; palette and type tokens are in `docs/assets/tokens.css`. The three copied sections have their own scoped stylesheet, `docs/assets/reference-sections.css`, and self-hosted Inter and Geist Mono fonts. The résumé button opens the browser's print dialog; choose Save as PDF to export. It does not use the outdated PDF from the previous site.
+Page structure is in `scripts/render-portfolio.mjs`. Hero, education, and footer styles are in `docs/assets/style.css`; palette and type tokens are in `docs/assets/tokens.css`. The three copied sections have their own scoped stylesheet, `docs/assets/reference-sections.css`, and self-hosted Inter and Geist Mono fonts. The **Download résumé** link serves `docs/assets/Varad-Parte-Resume.pdf`, an exact copy of the PDF provided by Varad. To update the download, replace that file with the new approved PDF and commit it. The website does not generate or print a résumé.
 
 ## Hosting and domain
 

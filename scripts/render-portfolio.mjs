@@ -30,7 +30,6 @@ const html = `<!doctype html>
   <link rel="stylesheet" href="${asset('assets/tokens.css')}">
   <link rel="stylesheet" href="${asset('assets/style.css')}">
   <link rel="stylesheet" href="${asset('assets/reference-sections.css')}">
-  <script src="assets/app.js" defer></script>
   <script type="application/ld+json">${JSON.stringify({'@context':'https://schema.org','@type':'Person',name:c.name,url:'https://varadparte.com/',jobTitle:c.role,sameAs:[c.github,c.linkedin],knowsAbout:['LLM engineering','RAG','Document intelligence','Agentic automation'],alumniOf:{'@type':'CollegeOrUniversity',name:'University of Cincinnati'}})}</script>
 </head>
 <body>
@@ -59,7 +58,7 @@ const html = `<!doctype html>
         <a href="${esc(c.linkedin)}" target="_blank" rel="noopener noreferrer">LinkedIn ${arrow}</a>
         <a href="${esc(c.github)}" target="_blank" rel="noopener noreferrer">GitHub ${arrow}</a>
         <a href="mailto:${esc(c.email)}">Email ${arrow}</a>
-        <button class="text-button print-button" type="button" hidden>Print résumé <span aria-hidden="true">↓</span></button>
+        <a class="text-button resume-download" href="assets/Varad-Parte-Resume.pdf" download="Varad-Parte-Resume.pdf" type="application/pdf">Download résumé <span aria-hidden="true">↓</span></a>
       </div>
     </section>
     </div>
